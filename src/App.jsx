@@ -44,7 +44,15 @@ function App() {
           /* 이름: John, 나이: 20 [삭제] 버튼이 하나의 행에 나올 수 있도록 해보세요. (hint: flex) */
           users.map((user) => (
             < form key={user.id} style={{ display: "flex" }}>
-              <div>ㄴ
+              <div style={{
+                alignItems: "center",
+                justifyContent: "center",
+                border: "1px solid black",
+                borderRadius: "10px",
+                padding: "15px",
+                margin: "5px",
+                fontSize: "18px"
+              }}>
                 이름: {user.name}, 나이: {user.age}
               </div>
               <button onClick={() => removeUser(user.id)}> 삭제 </button>
